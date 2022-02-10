@@ -1,0 +1,21 @@
+version: '3.3'
+
+services: 
+
+    pull:
+        build: .
+        command: /app/mirror.sh
+        volumes:
+            - "./mirror.sh:/app/mirror.sh:ro"
+            - "./mirror:/downloads"
+
+    serve:
+        build:
+            context: .
+            dockerfile: nginx.Dockerfile
+        restart: always
+        command: [nginx-debug, '-g', 'daemon off;']
+        volumes:
+            - "./mirror:/downloads:ro"
+        ports:
+            - "8080:80"
