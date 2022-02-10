@@ -2,12 +2,6 @@
 
 Download the whole Kubernetes.io documentation website
 
-<p align="center">
-    <a href="https://travis-ci.com/github/flavienbwk/kubernetes.io-docker" target="_blank">
-        <img src="https://travis-ci.com/flavienbwk/kubernetes.io-docker.svg?branch=main&status=passed"/>
-    </a>
-</p>
-
 ## Downloading & updating
 
 Run the `pull` container :
